@@ -2,17 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hola</title>
+  <title>Atrapa los corazones</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="app">
+    <div id="inicio">
+      <h2>Atrapa los corazones 💖</h2>
+      <p>Atrapa los corazones buenos 💖<br>Evita los malos 🖤 (¡van muy rápido!)<br>Tienes 3 vidas</p>
+      <button id="btn-jugar" onclick="iniciar()">Jugar</button>
+    </div>
 
-  <div class="container">
-    <h1>¿Pero eres mi bebé o na? 🌸</h1>
+    <div id="hud" style="display:none;">
+      <span id="vidas-txt">❤️❤️❤️</span>
+      <span id="puntos-txt">0 pts</span>
+    </div>
 
-    <div class="buttons">
-      <button id="btn-si">Sí 💖</button>
-      <button id="btn-no">No 😅</button>
+    <canvas id="canvas"></canvas>
+
+    <div id="overlay" style="display:none;">
+      <img src="luispulgar.jpeg" alt="luis">
+      <div id="overlay-txt">Game over 😭</div>
+      <div id="overlay-sub"></div>
+      <button id="btn-reiniciar" onclick="reiniciar()">Intentar de nuevo</button>
     </div>
   </div>
 
